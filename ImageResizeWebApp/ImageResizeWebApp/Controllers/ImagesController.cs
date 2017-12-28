@@ -57,7 +57,7 @@ namespace ImageResizeWebApp.Controllers
                         {
                             using (Stream stream = formFile.OpenReadStream())
                             {
-                                isUploaded = await StorageHelper.UploadFileToStorage(stream, Guid.NewGuid()+formFile.FileName, storageConfig);
+                                isUploaded = await StorageHelper.UploadFileToStorage(stream, Guid.NewGuid()+"-"+formFile.FileName, storageConfig);
                             }
                         }
                     }
