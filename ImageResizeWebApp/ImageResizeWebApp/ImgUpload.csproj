@@ -18,6 +18,8 @@
     <ApplicationIcon />
     <OutputTypeEx>exe</OutputTypeEx>
     <StartupObject />
+    <AssemblyName>ImgUpload</AssemblyName>
+    <RootNamespace>ImgUpload</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
