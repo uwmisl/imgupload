@@ -94,7 +94,7 @@
                   id="image-upload"
                   method="post"
                   enctype="multipart/form">
-
+				<div class="dz-success-mark"><span>✔done</span></div>
                 <div class="dz-message needsclick">
                     <span class="note needsclick">
                         Drop files here or tap/click to upload.
@@ -227,6 +227,7 @@
         paramName: "files", // The name that will be used to transfer the file
         dictDefaultMessage: "Drop files here or Click to Upload",
         addRemoveLinks: true, // Allows for cancellation of file upload and remove thumbnail
+		maxFileSize: 25,
         init: function() {
             myDropzone = this;
             myDropzone.on("success", function(file, response) {
