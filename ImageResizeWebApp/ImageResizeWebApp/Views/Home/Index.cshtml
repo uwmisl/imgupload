@@ -69,7 +69,7 @@
 
 	<h1>
         <a href="http://misl.cs.washington.edu"><img class="toplogoresize" src="/misl-logo.svg" alt="MISL" id="logo"></a>
-		#MemoriesInDNA Project
+		<font color="#4b2e83">#MemoriesInDNA</font>
 	</h1>
 
     <div class="box header">
@@ -82,12 +82,6 @@
     </div>
 
     <div class="box content">
-        <hr>
-        <h2>Upload photos</h2>
-        <p>
-            Please read the information below before uploading your photo. By using this site, you consent to the unrestricted,
-            royalty-free use of the submitted image for research purposes.
-        </p>
         <div>
             <form action="/api/images/upload"
                   class="dropzone needsclick dz-clickable"
@@ -101,6 +95,10 @@
                 </div>
             </form>
         </div>
+        <p>
+            Please read the information below before uploading your photo. By using this site, you consent to the unrestricted,
+            royalty-free use of the submitted image for research purposes.
+        </p>
         <div class="box footer">
             <h2>Consent</h2>
             <hr>
@@ -231,7 +229,7 @@
             myDropzone = this;
             myDropzone.on("success", function(file, response) {
                 console.log("Success");
-	            messageElement = Dropzone.createElement("Uploaded!");
+	            messageElement = Dropzone.createElement("Uploaded! Please encourage others to participate by sharing your image and this website with the hashtag <strong>#MemoriesInDNA</strong>!");
 	            this.element.appendChild(messageElement);
             });                    
         }
