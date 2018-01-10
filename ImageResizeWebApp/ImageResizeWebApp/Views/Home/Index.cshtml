@@ -231,7 +231,8 @@
             myDropzone = this;
             myDropzone.on("success", function(file, response) {
                 console.log("Success");
-				alert("File uploaded! Thanks!");
+	            messageElement = Dropzone.createElement("Uploaded!");
+	            this.element.appendChild(messageElement);
             });                    
         }
     };
