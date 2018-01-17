@@ -10,25 +10,20 @@
     html {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
+    
+    body {
+        margin: 0px;
+        font-family: 'Open Sans',sans-serif;
+    }
 
     main {
-        margin: 20px;
+        margin: 28px;
     }
 
     #gallery-note {
         font-size: smaller
     }
 
-    img.twlogoresize {
-        max-width: 25%;
-        max-height: 25%;
-		vertical-align: middle;
-    }
-    img.uwlogoresize {
-        max-width: 35%;
-        max-height: 35%;
-		vertical-align: middle;
-    }
     img.toplogoresize {
         width: 100px;
     }
@@ -60,21 +55,131 @@
         font-size: 18px;
         font-weight: 200;
         display: block;
-        margin-top 1.5rem;
+        margin-top: 1.5rem;
     }
-	
-	p {
-		font-family: 'Open Sans',sans-serif;
-	}
-</style>
+    
+    .uw-thinstrip {
+        height: 90px;
+        width: 100%;
+        background: #4b2e83;
+        padding-top: 22px;
+        position: relative;
+        z-index: 2;
+        -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    
+    .uw-thinstrip .container {
+        display: inline-block;
+    }
+    
+    .uw-thinstrip .misl-logo img {
+        height:70px;
+        margin-left:20px;
+    }
+    
+    .uw-thinstrip .header-title {
+        color:#fff;
+        font-size: 40px;
+        margin-left: 20px;
+    }
+    
+    h1, h2, h3 {
+        font-family:"Encode Sans Condensed",sans-serif;
+        color:#4b2e83;
+    }
+    
+    .logo-footer {
+        margin-top:40px;
+    }
+    
+    @media screen and (max-width: 580px) {
+        .uw-thinstrip .misl-logo img {
+            height:50px;
+            margin-left:10px;
+        }
 
+        .uw-thinstrip .header-title {
+            font-size: 25px;
+            margin-left: 10px;
+        }
+
+    }
+    
+    .logo-image {
+        display:inline-block;
+        padding:5px;
+    }
+    
+    .logo-image img {
+        height:45px;
+    }
+    
+    .twist-logo-image img {
+        height:100px;
+    }
+    
+    #as-logo, #msft-logo, #ee-logo {
+        margin-bottom:30px;
+    }
+    
+    #msft-logo {
+        padding-left:20px;
+        padding-right:10px;
+    }
+    
+    @media screen and (max-width: 1325px) {
+        .logo-image {
+            display:block;
+        }
+        .logo-footer {
+            margin-left: 30px;
+        }
+        #as-logo, #msft-logo, #ee-logo {
+            margin-bottom:5px;
+        }
+
+        #msft-logo {
+            padding-left:0px;
+            padding-right:0px;
+        }
+        #tw-logo {
+            margin-left:-15px;
+            margin-top: -10px;
+            margin-bottom: -10px
+        }
+    }
+    
+    @media screen and (max-width: 500px) {
+        .logo-footer {
+            margin-left: 10px;
+        }
+        .logo-image img {
+            height:30px;
+        }
+        .twist-logo-image img {
+            height:50px;
+        }
+        #tw-logo {
+            margin-left:-5px;
+            margin-top: -5px;
+            margin-bottom: -5px
+        }
+    }
+    
+    
+</style>
 
 <main>
 
-	<h1 style="font-family:"Encode Sans Compressed",sans-serif;">
-        <a href="http://misl.cs.washington.edu"><img class="toplogoresize" src="/misl-logo.svg" alt="MISL" id="logo"></a>
-		<font color="#4b2e83">#MemoriesInDNA</font>
-	</h1>
+<header class="uw-thinstrip">
+  <div class="container">
+    <a href="https://homes.cs.washington.edu/" title="Allen School Home" class="misl-logo"><img src="./fred_files/MISL-logo-white.svg"></a>
+  </div>
+    <span class="header-title">#MemoriesInDNA</span>
+</header>
+    <main>
 
     <div class="box header">
 
@@ -84,7 +189,7 @@
             retrieval system for digital data based on nature’s own perfected data storage system — DNA!
         </p>
     </div>
-
+	
     <div class="box content">
         <div>
             <form action="/api/images/upload"
@@ -149,12 +254,12 @@
                 <a class="play-pause"></a>
                 <ol class="indicator"></ol>
             </div>
-            <p align="center">
-                <a href="http://www.cs.washington.edu"><img class="uwlogoresize" src="/allen-school-logo.png" alt="Allen School" id="as-logo"></a><br>
-                <a href="http://www.microsoft.com/"><img class="twlogoresize" src="/msft-logo-small.png" alt="Microsoft" id="msft-logo"></a><br>
-                <a href="http://twistbioscience.com/"><img class="twlogoresize" src="/twist-logo-small.png" alt="Twist Bioscience" id="tw-logo"></a><br>
-                <a href="http://www.ee.washington.edu"><img class="uwlogoresize" src="/ee-logo.png" alt="UW EE" id="ee-logo"></a>
-            </p>
+            <div class="logo-footer">
+                <div class="logo-image"><a href="http://www.cs.washington.edu/"><img src="./fred_files/AllenSchool_mark_RGB.svg" alt="Allen School" id="as-logo"></a></div>
+                <div class="logo-image"><a href="http://www.microsoft.com/"><img src="./fred_files/Microsoft_logo_2012.svg" alt="Microsoft" id="msft-logo"></a></div>
+                <div class="logo-image twist-logo-image"><a href="http://twistbioscience.com/"><img src="./fred_files/Twist-Logo.svg" alt="Twist Bioscience" id="tw-logo"></a></div>
+                <div class="logo-image"><a href="http://www.ee.washington.edu/"><img src="./fred_files/UW-EE-purple-RGB.svg" alt="UW EE" id="ee-logo"></a></div>
+            </div>
         </div>
     </div>
 
