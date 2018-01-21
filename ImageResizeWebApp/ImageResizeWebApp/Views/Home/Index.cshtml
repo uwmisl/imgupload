@@ -208,7 +208,6 @@
         </p>
         <div class="box footer">
             <h2>Consent</h2>
-            <hr>
             <div class="privacy">
                 <p>
                     Researchers in the Molecular Information Systems Laboratory at the University of Washington in Seattle, Washington, U.S.A.
@@ -354,11 +353,10 @@ automatically in just a few seconds.
             myDropzone = this;
             myDropzone.on("success", function(file, response) {
                 console.log("Success");
-	            messageElement = Dropzone.createElement("Uploaded!");
-	            this.element.appendChild(messageElement);
-	            messageElement = Dropzone.createElement("Please encourage others to participate by sharing your image and this website with the hashtag #MemoriesInDNA.");
-	            this.element.appendChild(messageElement);
-		    appInsights.trackEvent("Upload");
+		appInsights.trackEvent("Upload");
+		var dzElement = document.getElementById("image-upload").innerHTML = "Uploaded, thanks! Please encourage others to participate by sharing your image and this website with the hashtag #MemoriesInDNA.";
+//	            messageElement = Dropzone.createElement("Uploaded! Please encourage others to participate by sharing your image and this website with the hashtag #MemoriesInDNA.");
+//	            this.element.appendChild(messageElement);
             });                    
         }
     };
